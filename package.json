@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohamedmhiri/bookstore-client-side.git"
+    "url": "git+https://github.com/mohamedmhiri/bookstore-server-side.git"
   },
   "author": "mohamed mhiri && maryem en yahia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mohamedmhiri/bookstore-client-side/issues"
+    "url": "https://github.com/mohamedmhiri/bookstore-server-side/issues"
   },
-  "homepage": "https://github.com/mohamedmhiri/bookstore-client-side#readme",
+  "homepage": "https://github.com/mohamedmhiri/bookstore-server-side#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "connect-mongo": "^1.3.2",
