@@ -23,8 +23,8 @@ const app = express()
 app.use(cookieParser())
 app.use(session({
   secret: 'mySecret',
-  resave: true,
-  saveUninitialized: true,
+  resave: false, // 1(false,true)
+  saveUninitialized: false,
   store: new MongoStore({ mongooseConnection: mongoose.connection }),
   cookie: { maxAge: 180 * 60 * 1000, secure: false, httpOnly: true }
 }))
@@ -71,10 +71,10 @@ let corsOptions = {
 app.use(cors(corsOptions))
 // Cross Origin middleware
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*') //<-- you can change this with a specific url like http://localhost:4200
+  res.header('Access-Control-Allow-Origin', req.headers.origin) //<-- you can change this with a specific url like http://localhost:4200
   res.header('Access-Control-Allow-Credentials', true)
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
-  res.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json')
+  res.header('Access-Control-Allow-Headers', 'Origin,X-Requested-With,Content-Type,Accept,X-HTTP-Method-Override,application/json')
   next()
 })
 // Set our api routes
