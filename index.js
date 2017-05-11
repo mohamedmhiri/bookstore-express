@@ -83,6 +83,7 @@ app.use('/api', require('./lib/routes/book'))
 app.use('/api', require('./lib/routes/client'))
 app.use('/api', require('./lib/routes/category'))
 app.use('/api', require('./lib/routes/cart'))
+app.use('/api', require('./lib/routes/command'))
 app.use('/api', require('./lib/routes/feed'))
 
 app.use((req, res, next) => {
