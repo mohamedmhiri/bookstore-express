@@ -106,3 +106,4 @@ const server = http.createServer(app)
  * Listen on provided port, on all network interfaces.
  */
 server.listen(port, () => console.log(`Book Store API running on localhost:${port}`))
+module.exports = () => 'Peace be upon you :D'
