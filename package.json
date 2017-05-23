@@ -4,6 +4,7 @@
   "description": "end of year project",
   "main": "index.js",
   "scripts": {
+    "start": "micro index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "mongoose": "^4.9.8",
     "mongoose-auto-increment": "^5.0.1",
     "passport": "^0.3.2",
-    "passport-auth0": "^0.6.0"
+    "passport-auth0": "^0.6.0",
+    "micro": "latest"
   }
 }
